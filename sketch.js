@@ -9,6 +9,7 @@ var gO_i;
 var PLAY=1;
 var END=0;
 var gameState=1;
+var go_s;
 
 var score=0;
 function preload(){
@@ -20,6 +21,8 @@ function preload(){
    a1_i=loadImage("alien1.png");
   a2_i=loadImage("alien2.png");
   gO_i=loadImage("gameover.png");
+  go_s=loadSound("gameover.mp3");
+  
 }
 
 
@@ -53,6 +56,7 @@ function draw(){
       fruitGroup.setVelocityXEach(0);
       alienGroup.setVelocityXEach(0);
       sword.addImage(gO_i);
+      go_s.play();
       sword.x=200;
       sword.y=200;
 }
